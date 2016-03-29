@@ -12,10 +12,7 @@ class MoviesController < ApplicationController
       flash[:notice] = "'#{@movie.title}' has no director info"
       redirect_to root_path
     end
-    @movies = Movie.find_all_by_director(@movie.director)
-    if @movies == nil
-      flash[:notice] = "#{@movie.title} has no similar moives"
-    end
+    @movies = Movie.all_productions(@movie.director)
   end
 
   def index

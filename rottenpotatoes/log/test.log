@@ -2837,3 +2837,696 @@ Processing by MoviesController#index as HTML
   Rendered movies/index.html.haml within layouts/application (6.8ms)
 Completed 200 OK in 11.6ms (Views: 9.7ms | ActiveRecord: 0.2ms)
   [1m[35m (0.3ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x15a33bc @name=Movie(id: integer, title: string, rating: string, description: text, release_date: datetime, created_at: datetime, updated_at: datetime, director: string)]", "id"=>"1"}
+Completed 500 Internal Server Error in 1.2ms
+  [1m[35m (0.2ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "movies"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "movies" ("id", "title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (2, 'Milk', 'R', '2008-11-26', 'abc', '2016-03-28 19:47:31', '2016-03-28 19:47:31')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("id", "title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (1, 'Star Wars', 'R', '2000-01-01', 'abc', '2016-03-28 19:47:31', '2016-03-28 19:47:31')
+  [1m[36m (12.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mMovie Load (8.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "movies"
+  [1m[36mFixture Insert (0.3ms)[0m  [1mINSERT INTO "movies" ("id", "title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (2, 'Milk', 'R', '2008-11-26', 'abc', '2016-03-28 19:48:31', '2016-03-28 19:48:31')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("id", "title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (1, 'Star Wars', 'R', '2000-01-01', 'abc', '2016-03-28 19:48:31', '2016-03-28 19:48:31')
+  [1m[36m (11.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mMovie Load (9.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mFixture Delete (0.4ms)[0m  DELETE FROM "movies"
+  [1m[36mFixture Insert (0.2ms)[0m  [1mINSERT INTO "movies" ("id", "title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (2, 'Milk', 'R', '2008-11-26', 'abc', '2016-03-28 19:49:27', '2016-03-28 19:49:27')[0m
+  [1m[35mFixture Insert (0.1ms)[0m  INSERT INTO "movies" ("id", "title", "rating", "release_date", "director", "created_at", "updated_at") VALUES (1, 'Star Wars', 'R', '2000-01-01', 'abc', '2016-03-28 19:49:27', '2016-03-28 19:49:27')
+  [1m[36m (13.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mMovie Load (11.6ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", 1]]
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"1", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+Completed 500 Internal Server Error in 20.9ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x1b5a60c @name=\"star war\"]", "id"=>"1"}
+  [1m[35mMovie Load (11.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+Completed 404 Not Found in 22.6ms
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x163db10 @name=\"star war\"]", "id"=>"1"}
+Completed 500 Internal Server Error in 1.0ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x285b428 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x285b428%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.8ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x1ae1f54 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x1ae1f54%20@name=%22star%20war%22%5D
+Completed 302 Found in 2.1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x172f514 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x172f514%20@name=%22star%20war%22%5D
+Completed 302 Found in 2.1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x1846f24 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x1846f24%20@name=%22star%20war%22%5D
+Completed 302 Found in 47.6ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2e6be58 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2e6be58%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x230d624 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x230d624%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.5ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x1cab268 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x1cab268%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (2.0ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x1be610c @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x1be610c%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2d66148 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2d66148%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.7ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x25e3510 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x25e3510%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x195eb8c @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x195eb8c%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.9ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x179ccf4 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x179ccf4%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x17b71e4 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x17b71e4%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[35mMovie Load (8.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'George Lucas'
+Completed 200 OK in 116.6ms (Views: 91.9ms | ActiveRecord: 16.0ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2fcc338 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2fcc338%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.8ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 94.2ms (Views: 93.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 66.0ms (Views: 65.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x20040a4 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x20040a4%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 70.8ms (Views: 70.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x1df4ac0 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x1df4ac0%20@name=%22star%20war%22%5D
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.7ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0xfd253c @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0xfd253c%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 74.1ms (Views: 73.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.6ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 68.7ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.1ms (Views: 0.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2122800 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2122800%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 83.4ms (Views: 82.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.8ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x16dcfa8 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x16dcfa8%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 500 Internal Server Error in 12.4ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 68.3ms (Views: 68.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2d6bcec @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2d6bcec%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 65.9ms (Views: 65.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.3ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x1ea0a78 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x1ea0a78%20@name=%22star%20war%22%5D
+Completed 302 Found in 0.9ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 84.4ms (Views: 83.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x1a5b0a8 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x1a5b0a8%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.5ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (93.8ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Mar 2016 16:31:51 UTC +00:00], ["description", nil], ["director", "George Lucas"], ["rating", "PG"], ["release_date", Wed, 25 May 1977 00:00:00 UTC +00:00], ["title", "Star Wars"], ["updated_at", Tue, 29 Mar 2016 16:31:51 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (20.6ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 29 Mar 2016 16:31:51 UTC +00:00], ["description", nil], ["director", "Ridley Scott"], ["rating", "PG"], ["release_date", Fri, 25 Jun 1982 00:00:00 UTC +00:00], ["title", "Blade Runner"], ["updated_at", Tue, 29 Mar 2016 16:31:51 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Mar 2016 16:31:51 UTC +00:00], ["description", nil], ["director", ""], ["rating", "R"], ["release_date", Fri, 25 May 1979 00:00:00 UTC +00:00], ["title", "Alien"], ["updated_at", Tue, 29 Mar 2016 16:31:51 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 29 Mar 2016 16:31:51 UTC +00:00], ["description", nil], ["director", "George Lucas"], ["rating", "R"], ["release_date", Thu, 11 Mar 1971 00:00:00 UTC +00:00], ["title", "THX-1138"], ["updated_at", Tue, 29 Mar 2016 16:31:51 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."title" = 'Alien' LIMIT 1
+Started GET "/movies/3/edit" for 127.0.0.1 at 2016-03-29 16:31:51 +0000
+Processing by MoviesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "3"]]
+  Rendered movies/edit.html.haml within layouts/application (36.9ms)
+Completed 200 OK in 135.3ms (Views: 132.5ms | ActiveRecord: 0.3ms)
+Started PUT "/movies/3" for 127.0.0.1 at 2016-03-29 16:31:52 +0000
+Processing by MoviesController#update as HTML
+  Parameters: {"utf8"=>"✓", "movie"=>{"title"=>"Alien", "rating"=>"R", "release_date(1i)"=>"1979", "release_date(2i)"=>"5", "release_date(3i)"=>"25", "director"=>"Ridley Scott"}, "commit"=>"Update Movie Info", "id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "3"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  UPDATE "movies" SET "director" = 'Ridley Scott', "updated_at" = '2016-03-29 16:31:52.115029' WHERE "movies"."id" = 3
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/movies/3
+Completed 302 Found in 7.2ms (ActiveRecord: 0.5ms)
+Started GET "/movies/3" for 127.0.0.1 at 2016-03-29 16:31:52 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered movies/show.html.haml within layouts/application (5.0ms)
+Completed 200 OK in 12.7ms (Views: 10.7ms | ActiveRecord: 0.1ms)
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."title" = 'Alien' LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00], ["description", nil], ["director", "George Lucas"], ["rating", "PG"], ["release_date", Wed, 25 May 1977 00:00:00 UTC +00:00], ["title", "Star Wars"], ["updated_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00], ["description", nil], ["director", "Ridley Scott"], ["rating", "PG"], ["release_date", Fri, 25 Jun 1982 00:00:00 UTC +00:00], ["title", "Blade Runner"], ["updated_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00], ["description", nil], ["director", ""], ["rating", "R"], ["release_date", Fri, 25 May 1979 00:00:00 UTC +00:00], ["title", "Alien"], ["updated_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00], ["description", nil], ["director", "George Lucas"], ["rating", "R"], ["release_date", Thu, 11 Mar 1971 00:00:00 UTC +00:00], ["title", "THX-1138"], ["updated_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."title" = 'Star Wars' LIMIT 1
+Started GET "/movies/1" for 127.0.0.1 at 2016-03-29 16:31:52 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered movies/show.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 7.0ms (Views: 5.2ms | ActiveRecord: 0.1ms)
+Started GET "/movies/1/similar" for 127.0.0.1 at 2016-03-29 16:31:52 +0000
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."director" = 'George Lucas'[0m
+  Rendered movies/similar.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 17.2ms (Views: 11.6ms | ActiveRecord: 0.3ms)
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."title" = 'Star Wars' LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00], ["description", nil], ["director", "George Lucas"], ["rating", "PG"], ["release_date", Wed, 25 May 1977 00:00:00 UTC +00:00], ["title", "Star Wars"], ["updated_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00], ["description", nil], ["director", "Ridley Scott"], ["rating", "PG"], ["release_date", Fri, 25 Jun 1982 00:00:00 UTC +00:00], ["title", "Blade Runner"], ["updated_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["created_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00], ["description", nil], ["director", ""], ["rating", "R"], ["release_date", Fri, 25 May 1979 00:00:00 UTC +00:00], ["title", "Alien"], ["updated_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("created_at", "description", "director", "rating", "release_date", "title", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["created_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00], ["description", nil], ["director", "George Lucas"], ["rating", "R"], ["release_date", Thu, 11 Mar 1971 00:00:00 UTC +00:00], ["title", "THX-1138"], ["updated_at", Tue, 29 Mar 2016 16:31:52 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."title" = 'Alien' LIMIT 1[0m
+Started GET "/movies/3" for 127.0.0.1 at 2016-03-29 16:31:52 +0000
+Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mMovie Load (0.1ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "3"]]
+  Rendered movies/show.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 5.3ms (Views: 4.2ms | ActiveRecord: 0.1ms)
+Started GET "/movies/3/similar" for 127.0.0.1 at 2016-03-29 16:31:52 +0000
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"3"}
+  [1m[36mMovie Load (0.1ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "3"]]
+Redirected to http://www.example.com/
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = ''
+Completed 302 Found in 3.1ms (ActiveRecord: 0.3ms)
+Started GET "/" for 127.0.0.1 at 2016-03-29 16:31:52 +0000
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+  Rendered movies/index.html.haml within layouts/application (66.0ms)
+Completed 200 OK in 72.8ms (Views: 70.7ms | ActiveRecord: 0.2ms)
+  [1m[35m (0.4ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"2"}
+Completed 500 Internal Server Error in 8.4ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x21556ec @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x21556ec%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 67.7ms (Views: 67.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 184.0ms (Views: 183.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.7ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2256d84 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2256d84%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.3ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  [1m[35mMovie Load (32.8ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = 'George Lucas'
+Completed 200 OK in 76.3ms (Views: 11.3ms | ActiveRecord: 40.3ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 72.8ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.8ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (1.6ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2115538 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2115538%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.6ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (1.3ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0xbac070 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0xbac070%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.6ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 95.4ms (Views: 94.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.4ms (Views: 1.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x5fa1b8 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x5fa1b8%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"2"}
+Completed 500 Internal Server Error in 0.5ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 67.0ms (Views: 66.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 129.7ms (Views: 128.8ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 2.1ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"2"}
+Completed 500 Internal Server Error in 0.4ms
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x266b0f0 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x266b0f0%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"2"}
+Redirected to http://test.host/
+  [1m[35mMovie Load (9.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = ''
+Completed 302 Found in 24.0ms (ActiveRecord: 14.1ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 92.5ms (Views: 92.1ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.9ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2eecbac @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2eecbac%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.2ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 101.6ms (Views: 100.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.3ms (Views: 1.0ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"2"}
+Redirected to http://test.host/
+  [1m[35mMovie Load (7.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = ''
+Completed 302 Found in 19.4ms (ActiveRecord: 12.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x2841bf4 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x2841bf4%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.1ms (ActiveRecord: 0.0ms)
+  [1m[36m (0.1ms)[0m  [1mrollback transaction[0m
+Connecting to database specified by database.yml
+  [1m[36m (1.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+  Rendered movies/similar.html.haml within layouts/application (0.3ms)
+Completed 200 OK in 99.2ms (Views: 98.5ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"1"}
+Completed 200 OK in 1.2ms (Views: 0.9ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#update as HTML
+  Parameters: {"movie"=>"#[RSpec::Mocks::Mock:0x304f0d0 @name=\"star war\"]", "id"=>"1"}
+Redirected to http://test.host/movies/%23%5BRSpec::Mocks::Mock:0x304f0d0%20@name=%22star%20war%22%5D
+Completed 302 Found in 1.0ms (ActiveRecord: 0.0ms)
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Processing by MoviesController#similar as HTML
+  Parameters: {"movie_id"=>"2"}
+Redirected to http://test.host/
+  [1m[35mMovie Load (8.9ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."director" = ''
+Completed 302 Found in 21.7ms (ActiveRecord: 14.2ms)
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
