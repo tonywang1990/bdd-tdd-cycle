@@ -28,7 +28,7 @@ describe MoviesController do
     it 'should call model method that find similar movies' do 
       @fake_resutls = [double('movie1'), double('movie2')]
       Movie.should_receive(:all_productions).with(@fake_movie.director).and_return(@fake_resutls)
-      get :similar, {:movie_id => @fake_movie.id}
+      post :similar, {:movie_id => @fake_movie.id}
     end
     it 'should select similar movies view for rendering and make results available' do
       Movie.stub(:all_productions).and_return(@fake_movie)
